@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "yarn storybook",
-    "storybook": "start-storybook -s ./src -p 6006",
+    "storybook": "start-storybook -s ./src -p 7007",
     "clean": "yarn cache clean && rm -rf node_modules yarn.lock && yarn",
     "lint": "eslint src --fix",
     "test": "yarn run jest --silent",
