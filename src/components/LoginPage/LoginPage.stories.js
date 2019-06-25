@@ -2,6 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import figmaDecorator from 'storybook-addon-figma';
 import LoginPage from './LoginPage';
+import { withTheme } from '../theme';
 import { noDataFixture, loadingFixture, basicDataFixture, mockFnFixture } from './LoginPage.fixtures';
 
 storiesOf('LoginPage', module)

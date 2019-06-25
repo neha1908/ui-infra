@@ -1,8 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Form, Icon, Input, Button } from 'antd';
+import { Form, Icon, Input, Button , Typography } from 'antd';
 import Proptypes from '../proptypes';
 
+
+const { Title } = Typography;
+const StyledForm = styled(Form)`
+  align: center;
+  width: 100%;
+`
 const FormHeader = styled.div`
   font-size: 22px;
   font-weight: 600;
@@ -26,8 +32,8 @@ const LoginForm = ({ form, onAction, redirectToForgotPassword }) => {
 
   const { getFieldDecorator } = form;
   return (
-    <Form onSubmit={handleSubmit} className="login-form">
-      <FormHeader>Welcome Back!</FormHeader>
+    <StyledForm onSubmit={handleSubmit} className="login-form">
+      <Title level={3} style={{ textAlign: 'center' }}>Welcome Back!</Title>
       <Form.Item>
         {getFieldDecorator('username', {
           rules: [{ required: true, message: 'Please input your username!' }],
@@ -58,7 +64,7 @@ const LoginForm = ({ form, onAction, redirectToForgotPassword }) => {
           Login to continue
         </Button>
       </Form.Item>
-    </Form>
+    </StyledForm>
   );
 };
 
